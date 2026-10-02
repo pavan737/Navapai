@@ -14,6 +14,12 @@ This repository is also an AWS Solutions Architect Associate (SAA) practice proj
 - Earn achievements and view activity analytics and heatmaps.
 - Support community upvotes, moderation workflows, audit logs, and administrative user management.
 
+## AWS Solutions Architect Practice Projects
+This repository demonstrates three AWS projects using the same Navapai application:
+1. Highly Available Three-Tier Architecture (VPC, ALB, Auto Scaling, RDS)
+2. Infrastructure as Code with Terraform
+3. Containerized Monitoring with Prometheus + Grafana + CloudWatch
+
 ## Architecture
 
 ```text
