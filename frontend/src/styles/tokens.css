@@ -1,0 +1,87 @@
+:root {
+  /* Exact Navapai Cloud Brand Palette */
+  --color-primary: #0082FF;          /* Primary Blue */
+  --color-primary-hover: #006EDB;
+  --color-primary-light: #EBF5FF;
+  --color-primary-subtle: rgba(0, 130, 255, 0.08);
+
+  --color-secondary: #00D2FF;        /* Secondary Cyan */
+  --color-secondary-hover: #00BBE6;
+  --color-secondary-subtle: rgba(0, 210, 255, 0.12);
+
+  /* Backgrounds: 60% White, 30% Soft Gray */
+  --color-bg-main: #FFFFFF;          /* Dominant Canvas (60%) */
+  --color-bg-section: #F4F7FA;       /* Alternate Sections (30%) */
+  --color-surface-card: #FFFFFF;     /* Enterprise Card Canvas */
+  --color-surface-elevated: #FFFFFF;
+
+  /* Typography: Dark Contrast & Slate Gray */
+  --color-text-main: #111827;        /* Primary Text / Headings */
+  --color-text-muted: #6B7280;       /* Secondary Text / Captions */
+  --color-text-light: #9CA3AF;
+  --color-text-inverse: #FFFFFF;
+
+  /* Borders & Dividers */
+  --color-border: #E5E7EB;           /* Clean Modern Border */
+  --color-border-hover: #D1D5DB;
+  --color-border-focus: #0082FF;
+
+  /* Dark Footer */
+  --color-footer-bg: #111827;
+  --color-footer-text: #FFFFFF;
+  --color-footer-muted: #9CA3AF;
+  --color-footer-links: #D1D5DB;
+  --color-footer-hover: #00D2FF;
+
+  /* Brand Gradient (Used Sparingly) */
+  --gradient-brand: linear-gradient(135deg, #0082FF 0%, #00D2FF 100%);
+  --gradient-glow: radial-gradient(circle at 50% 50%, rgba(0, 210, 255, 0.15) 0%, rgba(0, 130, 255, 0) 70%);
+
+  /* System Feedback */
+  --color-success: #10B981;
+  --color-success-subtle: #ECFDF5;
+  --color-warning: #F59E0B;
+  --color-warning-subtle: #FFFBEB;
+  --color-error: #EF4444;
+  --color-error-subtle: #FEF2F2;
+
+  /* Typography Scale */
+  --font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-md: 1.125rem;   /* 18px */
+  --font-size-lg: 1.25rem;    /* 20px */
+  --font-size-xl: 1.5rem;     /* 24px */
+  --font-size-2xl: 2rem;      /* 32px */
+  --font-size-3xl: 2.75rem;   /* 44px */
+  --font-size-hero: 3.5rem;   /* 56px */
+
+  /* Spacing */
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3.5rem;
+  --spacing-16: 5rem;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.06), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 10px 25px -5px rgba(0, 130, 255, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+  --shadow-card-hover: 0 12px 24px -4px rgba(0, 130, 255, 0.12), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  /* Border Radii */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}

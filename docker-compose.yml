@@ -1,0 +1,63 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: navapai_db
+    restart: always
+    environment:
+      POSTGRES_DB: navapai_db
+      POSTGRES_USER: navapai_user
+      POSTGRES_PASSWORD: NavapaiSecurePass2026!
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U navapai_user -d navapai_db" ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: navapai_redis
+    restart: always
+    healthcheck:
+      test: [ "CMD", "redis-cli", "ping" ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: navapai_backend
+    restart: always
+    environment:
+      - SECRET_KEY=django-prod-secret-navapai-2026-key-change-me
+      - DEBUG=False
+      - ALLOWED_HOSTS=localhost,127.0.0.1,backend
+      - DATABASE_URL=postgres://navapai_user:NavapaiSecurePass2026!@db:5432/navapai_db
+      - REDIS_URL=redis://redis:6379/0
+      - CORS_ALLOW_ALL_ORIGINS=True
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: navapai_frontend
+    restart: always
+    depends_on:
+      - backend
+    ports:
+      - "80:80"
+
+volumes:
+  postgres_data:
